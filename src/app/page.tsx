@@ -1,3 +1,7 @@
+import MatchingAnimation from "@/components/MatchingAnimation";
+import TypeWord from "@/components/TypeWord";
+import ClientHero from "@/components/ClientHero";
+
 export default function Home() {
   return (
     <div className="relative min-h-screen text-foreground bg-background">
@@ -11,141 +15,226 @@ export default function Home() {
             <span className="nav-compact">FlowRYD</span>
           </div>
           <nav className="hidden md:flex items-center gap-6 nav-compact">
-            <a href="#positioning" className="text-white/70 hover:text-white">Developers</a>
-            <a href="#products" className="text-white/70 hover:text-white">Products</a>
-            <a href="#ecosystem" className="text-white/70 hover:text-white">Ecosystem</a>
-            <a href="#resources" className="text-white/70 hover:text-white">Resources</a>
-            <a href="#scan" className="text-white/70 hover:text-white">Scan</a>
+            <a href="#problem" className="text-white/70 hover:text-white">Problem</a>
+            <a href="#what" className="text-white/70 hover:text-white">With FlowRyd</a>
+            <a href="#dashboard" className="text-white/70 hover:text-white">How it Works</a>
+            <a href="#diagram" className="text-white/70 hover:text-white">Flow</a>
+            <a href="#develop" className="text-white/70 hover:text-white">Develop</a>
           </nav>
-          <button className="nav-compact btn-outline px-4 py-2 rounded">Developer Assistance</button>
+          <a href="/onboarding" className="nav-compact btn-outline px-4 py-2 rounded">Get Started</a>
         </div>
       </header>
 
       {/* HERO (LayerZero-like structure) */}
       <section className="lzr-background pt-24 md:pt-28 relative">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-          <div className="space-y-10">
-            <h1 className="headline-xl tracking-tight">
-              <span className="block text-[56px] md:text-[96px] lg:text-[120px]">Build</span>
-              <span className="block text-[56px] md:text-[96px] lg:text-[120px] text-[#b49bff]">Flows</span>
-              <span className="block text-[56px] md:text-[96px] lg:text-[120px]">Omnichain</span>
-            </h1>
-            <div className="space-y-2">
-              <div className="kicker">Flow. Fast. Together.</div>
-              <div className="text-xl md:text-2xl text-white/85">From ‘let’s connect’ to ‘we shipped’ in 6 weeks.</div>
-              <p className="text-white/70 max-w-3xl">The acceleration layer of Canton, connecting participants, blueprints, and capital to turn coordination into real market activity.</p>
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            <div className="space-y-6">
+              <h1 className="headline-xl tracking-tight">
+                <span className="block text-[56px] md:text-[96px] lg:text-[120px]">Flow</span>
+                <span className="block text-[56px] md:text-[96px] lg:text-[120px]">
+                  <TypeWord className="font-inherit" words={["FAST", "QUICK", "RYD"]} />
+                </span>
+                <span className="block text-[56px] md:text-[96px] lg:text-[120px]">Together</span>
+              </h1>
+              <div className="space-y-2">
+                <div className="kicker">From ‘let’s connect’ to ‘we shipped’ in 6 weeks.</div>
+                <p className="text-white/70 max-w-3xl">The acceleration layer of Canton, connecting participants, blueprints, and capital to turn coordination into real market activity.</p>
+              </div>
+              <div>
+                <a href="#apply" className="group inline-flex items-center justify-between w-[320px] md:w-[420px] h-12 border border-white/30 hover:border-white/60 rounded px-4 nav-compact">
+                  <span>START BUILDING</span>
+                  <span className="transition-transform group-hover:translate-x-0.5">↗</span>
+                </a>
+              </div>
             </div>
-            <div>
-              <a href="#apply" className="group inline-flex items-center justify-between w-[320px] md:w-[420px] h-12 border border-white/30 hover:border-white/60 rounded px-4 nav-compact">
-                <span>START BUILDING</span>
-                <span className="transition-transform group-hover:translate-x-0.5">↗</span>
-              </a>
-            </div>
-            <p className="nav-compact text-white/50">/// one protocol. any blockchain.</p>
+            <div className="relative h-[320px] md:h-[420px] lg:h-[520px]"><ClientHero /></div>
           </div>
-        </div>
-        {/* credibility bar under CTA */}
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-10">
-          <p className="text-sm text-white/60 max-w-4xl">Canton today: 600+ validators, 35+ featured apps, 25,000+ parties. Infrastructure is here. Flows aren’t. We fix that.</p>
         </div>
       </section>
 
+  
       {/* SECTIONS */}
       <main>
         <section id="problem" className="section border-t border-white/10">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <p className="kicker mb-4">The Problem</p>
-            <div className="space-y-4 max-w-4xl text-white/80">
-              <p>You already know your use case. What you don’t know is who you need to make it work.</p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Discovery is broken: partners are scattered across LinkedIn, Slack, Discord, Telegram.</li>
-                <li>Collaboration is slow: multi-party flows → endless meetings, months of legal.</li>
-                <li>No blueprint: every on-chain flow gets rebuilt from scratch. Growth stays linear.</li>
-              </ul>
-              <p className="text-white/60">Bottom line: Technology works. Participation is growing. But coordination doesn’t scale—and that’s how great networks die waiting.</p>
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
+              {/* Left grid panel (visual) */}
+              <div className="md:col-span-5">
+                <div className="nav-compact text-white/70 mb-3">[ 01 / 06 ]</div>
+                <div className="relative h-[520px] rounded border border-white/10 overflow-hidden bg-black/40">
+                  {/* subtle grid pattern */}
+                  <div className="absolute inset-0 opacity-20">
+                    <div className="w-full h-full" style={{
+                      backgroundImage: `repeating-linear-gradient(0deg, transparent 0px, transparent 23px, rgba(255,255,255,0.06) 23px, rgba(255,255,255,0.06) 24px),repeating-linear-gradient(90deg, transparent 0px, transparent 23px, rgba(255,255,255,0.06) 23px, rgba(255,255,255,0.06) 24px)`
+                    }} />
+                  </div>
+                  {/* decorative tiles */}
+                  <div className="absolute inset-6 grid grid-cols-3 grid-rows-3 gap-6">
+                    <div className="border border-white/10 bg-black/30 rounded" />
+                    <div className="border border-white/10 bg-black/30 rounded" />
+                    <div className="border border-white/10 bg-black/30 rounded" />
+                    <div className="border border-white/10 bg-black/30 rounded" />
+                    <div className="border border-white/10 bg-black/30 rounded" />
+                    <div className="border border-white/10 bg-black/30 rounded" />
+                    <div className="border border-white/10 bg-black/30 rounded" />
+                    <div className="border border-white/10 bg-black/30 rounded" />
+                    <div className="border border-white/10 bg-black/30 rounded" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Right content panel (text + CTAs) */}
+              <div className="md:col-span-7">
+                <div className="nav-compact mb-4">POSITIONING</div>
+                <p className="text-white/70 text-2xl md:text-4xl leading-snug">
+                  You already know your use case. What you don’t know is who you need to make it work.
+                  <span className="text-white"> Discovery is broken</span> — partners are scattered across LinkedIn, Slack, Discord, Telegram;
+                  <span className="text-white"> collaboration is slow</span> — multi‑party flows mean endless meetings and months of legal; and
+                  <span className="text-white"> there’s no blueprint</span> — every on‑chain flow gets rebuilt from scratch.
+                </p>
+                <p className="mt-6 text-white/60">Bottom line: Technology works. Participation is growing. But coordination doesn’t scale—and that’s how great networks die waiting.</p>
+
+                {/* CTA row */}
+                <div className="mt-10 flex flex-col sm:flex-row gap-3">
+                  <a className="group inline-flex items-center justify-between sm:w-[280px] h-12 border border-white/20 hover:border-white/50 rounded px-4 nav-compact" href="#apply">
+                    <span className="flex items-center gap-2">
+                      <img src="/file.svg" alt="doc" className="w-4 h-4 opacity-80" /> BLUEPRINT
+                    </span>
+                    <span className="transition-transform group-hover:translate-x-0.5">↗</span>
+                  </a>
+                  <a className="group inline-flex items-center justify-between sm:w-[280px] h-12 border border-white/20 hover:border-white/50 rounded px-4 nav-compact" href="#what">
+                    <span className="flex items-center gap-2">
+                      <img src="/globe.svg" alt="github" className="w-4 h-4 opacity-80" /> ECOSYSTEM
+                    </span>
+                    <span className="transition-transform group-hover:translate-x-0.5">↗</span>
+                  </a>
+                  <a className="group inline-flex items-center justify-between sm:w-[280px] h-12 border border-white/20 hover:border-white/50 rounded px-4 nav-compact" href="#faq">
+                    <span className="flex items-center gap-2">
+                      <img src="/window.svg" alt="blog" className="w-4 h-4 opacity-80" /> BLOG
+                    </span>
+                    <span className="transition-transform group-hover:translate-x-0.5">↗</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         <section id="what" className="section border-t border-white/10">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <p className="kicker mb-4">What FlowRyd Does</p>
-            <h2 className="text-3xl md:text-4xl font-semibold mb-8">Match → Blueprint → Orchestrate → Multiply</h2>
+            <h2 className="text-5xl md:text-6xl font-semibold mb-10">With Flowryd</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <Card title="Instant Matching" body="Your validator/app joins. FlowRyd shows 5 immediate opportunities aligned to your goals." />
-              <Card title="Proven Blueprint" body="We hand you the execution map: who, what, in what order, with pre-modeled success patterns." />
-              <Card title="Automated Cadence" body="Outreach, intros, prototype sprints, and next-best nudges—run as a go-to-market cadence." />
-              <Card title="Compounding Flows" body="Every successful connection becomes a reusable blueprint. Every blueprint unlocks more flows." />
+              {/* Left visual grid panel */}
+              <VisualGridPanel />
+              {/* Three cards in the reference style */}
+              <FeatureCard index="/ 01" title="Instant Matching" icon="ban" body="Your validator/app joins. FlowRyd shows 5 immediate opportunities aligned to your goals." />
+              <FeatureCard index="/ 02" title="Immutable Blueprints" icon="lock" body="The execution map is versioned and reusable; the pattern won’t drift as it scales." />
+              <FeatureCard index="/ 03" title="Permissionless Cadence" icon="link" body="Anyone can run the cadence and adopt the blueprint to generate more flows." />
             </div>
           </div>
         </section>
 
-        <section id="how" className="section border-t border-white/10">
+
+   
+
+        {/* Lighter-style dashboard animation */}
+        <section id="dashboard" className="section border-t border-white/10">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <p className="kicker mb-4">How It Works</p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Card title="Agent-Based Partner Matching" body="Real-time matching via LLM agents and scenario-based flow modeling, so you stop guessing and start building." />
-              <Card title="Success Prediction & Revenue Modeling" body="Know the likelihood of success before you waste a quarter in meetings." />
-              <Card title="Flow Prototyping Workspace" body="Spin up a test flow in weeks, not quarters. Legal frameworks included." />
-              <Card title="Automated GTM Cadences" body="Intros, follow-ups, and proof points run on rails. You get momentum without micromanaging." />
-              <Card title="Blueprint Marketplace + Rewards" body="Publish blueprints. Earn $CC royalties as others adopt them. Activity Markers reward real coordination." />
+            <div className="mb-2">
+              <p className="kicker">How FlowRyd Works</p>
             </div>
-          </div>
-        </section>
+            <p className="text-white/70 mb-8">The Canton coordination engine — matching, modeling, and automating every step of multi-party market creation.</p>
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-4 text-white/70">
+              {/* five info boxes */}
+              <div className="md:col-span-12 grid grid-cols-1 md:grid-cols-5 gap-4">
+                <div className="panel p-4">
+                  <div className="nav-compact mb-1 text-white/60">1. Discover</div>
+                  <div className="font-medium mb-1">Agent-Based Partner Matching</div>
+                  <p className="text-white/80">Find the right partners instantly — powered by LLM agents.</p>
+                </div>
+                <div className="panel p-4">
+                  <div className="nav-compact mb-1 text-white/60">2. Validate</div>
+                  <div className="font-medium mb-1">Success Prediction & Revenue Modeling</div>
+                  <p className="text-white/80">Predict success and revenue before you build.</p>
+                </div>
+                <div className="panel p-4">
+                  <div className="nav-compact mb-1 text-white/60">3. Prototype</div>
+                  <div className="font-medium mb-1">Flow Prototyping Workspace</div>
+                  <p className="text-white/80">Prototype legal-ready flows in weeks.</p>
+                </div>
+                <div className="panel p-4">
+                  <div className="nav-compact mb-1 text-white/60">4. Orchestrate</div>
+                  <div className="font-medium mb-1">Automated GTM Cadences</div>
+                  <p className="text-white/80">Automate outreach, proof, and tracking.</p>
+                </div>
+                <div className="panel p-4">
+                  <div className="nav-compact mb-1 text-white/60">5. Reward</div>
+                  <div className="font-medium mb-1">Blueprint Marketplace & Rewards</div>
+                  <p className="text-white/80">Earn $CC rewards as your blueprints spread.</p>
+                </div>
+              </div>
+              {/* timeline rail */}
+              <div className="md:col-span-12">
+                <div className="stage-rail" />
+              </div>
 
-        <section id="why" className="section border-t border-white/10">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <p className="kicker mb-4">Why Now</p>
-            <p className="text-white/70 max-w-4xl">Canton has world-class infrastructure but capital markets aren’t made of racks and APIs—they’re made of flows. The last pilot proved privacy on a public network works—but took 18 months to push one 15-party flow. At that pace, growth stalls. FlowRyd compresses that to ~6 weeks.</p>
-          </div>
-        </section>
-
-        <section id="offer" className="section border-t border-white/10">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <p className="kicker mb-4">What You Get</p>
-            <h2 className="text-3xl md:text-4xl font-semibold mb-6">The FlowRyd MVP Access Pass</h2>
-            <ul className="list-disc pl-6 space-y-2 max-w-3xl text-white/80">
-              <li>Your First 5 Qualified Opportunities in Canton</li>
-              <li>A Done-For-You Flow Blueprint (partners, sequence, metrics)</li>
-              <li>Automated GTM Cadence (intros, follow-ups, prototype sprints)</li>
-              <li>Activity Markers + $CC blueprint royalties as your flows get adopted</li>
-              <li>Adoption tracking + media hub for sharing results</li>
-            </ul>
-            <div className="mt-6">
-              <a href="#apply" className="btn-outline inline-flex items-center justify-center rounded px-5 py-3 nav-compact">Apply for MVP Access</a>
-              <p className="mt-3 text-white/60 text-sm max-w-3xl">We’re accepting a limited founding cohort to keep signal high and compounding effects real. When it fills, doors close until the next horizon.</p>
+              <div className="panel p-3 md:col-span-4 relative">
+                <div className="nav-compact mb-2">INCOMING_TX <span className="text-white/50">— Signals in</span></div>
+                <div className="cells">
+                  {Array.from({ length: 200 }).map((_, i) => (
+                    <div key={i} className="cell" style={{ animationDelay: `${(i%10)*0.1}s` }} />
+                  ))}
+                </div>
+                <div className="tx-pulse" />
+              </div>
+              <div className="panel p-3 md:col-span-4">
+                <div className="nav-compact mb-2">MATCHING ENGINE <span className="text-white/50">— Matching & validation</span></div>
+                <div className="glow-bar-list">
+                  {Array.from({ length: 8 }).map((_, i) => (
+                    <div key={i} className="glow-bar" style={{ animationDelay: `${i*0.25}s` }} />
+                  ))}
+                </div>
+              </div>
+              <div className="panel p-3 md:col-span-4">
+                <div className="nav-compact mb-2">CANTON</div>
+                <div className="flicker py-10 diamond-pulse">
+                  <div className="eth-diamond" />
+                  <div className="text-center mt-4 text-white/60 nav-compact">— Flow deployed on Canton</div>
+                </div>
+              </div>
             </div>
+            <p className="mt-8 text-white/70 text-center">Every connection becomes a flow. Every flow becomes a blueprint.</p>
           </div>
         </section>
 
-        <section id="avatars" className="section border-t border-white/10">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <p className="kicker mb-4">Who It’s For</p>
-            <ul className="list-disc pl-6 space-y-2 max-w-3xl text-white/80">
-              <li>Validators who want real transaction flows, not vanity stats.</li>
-              <li>Featured Apps ready to become default partners in repeatable blueprints.</li>
-              <li>Ecosystem Leads tasked with accelerating sustainable network activity.</li>
-            </ul>
+   
+
+        {/* GET STARTED replaces Develop with FlowRyd */}
+        <section id="develop" className="section border-t border-white/10">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
+            <h2 className="text-4xl md:text-5xl font-semibold mb-4">Get Started Now.</h2>
+            <p className="text-white/70 max-w-3xl mb-8">FlowRyd gives teams the acceleration layer to coordinate participants, reuse blueprints, and move from talks to shipped flows in weeks.</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <a href="/onboarding" title="Join the Canton coordination layer and start matching flows instantly." className="group rounded border border-white/20 hover:border-white/50 bg-black/30 px-5 py-4 flex items-center justify-between">
+                <div>
+                  <div className="nav-compact mb-1">Onboard as Node →</div>
+                  <div className="text-white/60 text-sm">Ideal for builders, validators, or apps joining the FlowRyd network.</div>
+                </div>
+                <span className="transition-transform group-hover:translate-x-0.5">↗</span>
+              </a>
+              <a href="/contact" title="Book a session with our team to explore integration and early access." className="group rounded border border-white/20 hover:border-white/50 bg-black/30 px-5 py-4 flex items-center justify-between">
+                <div>
+                  <div className="nav-compact mb-1">Schedule a Call →</div>
+                  <div className="text-white/60 text-sm">Ideal for partners, enterprises, and BD contacts.</div>
+                </div>
+                <span className="transition-transform group-hover:translate-x-0.5">↗</span>
+          </a>
+        </div>
           </div>
         </section>
 
-        <section id="objections" className="section border-t border-white/10">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <p className="kicker mb-4">Objections → Reframes</p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Card title="We can network ourselves." body="If that worked, you wouldn’t still be scheduling discovery calls. FlowRyd replaces guesswork with modeled matches and proven sequences." />
-              <Card title="Legal slows everything." body="Our flow blueprints include frameworks designed for repeatable adoption, not bespoke one-offs." />
-              <Card title="We need proof before we commit." body="That’s the point: prototyping in weeks with clear success metrics and adoption tracking." />
-            </div>
-          </div>
-        </section>
-
-        <section id="risk" className="section border-t border-white/10">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <p className="kicker mb-4">Risk Reversal</p>
-            <p className="text-white/80 max-w-3xl">Try the Blueprint Risk-Free: If we can’t surface 5 qualified opportunities within 14 days of onboarding, you don’t continue. Simple.</p>
-          </div>
-        </section>
+     
 
         {/* Social proof strip */}
         <section className="py-6 border-y border-white/10 bg-black/30">
@@ -154,43 +243,61 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Application form */}
-        <section id="apply" className="section">
-          <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-            <h3 className="text-2xl font-semibold mb-4">Apply for MVP Access</h3>
-            <form className="grid grid-cols-1 gap-4">
-              <input className="bg-black/50 border border-white/10 rounded px-3 py-2" placeholder="Name" aria-label="Name" />
-              <input className="bg-black/50 border border-white/10 rounded px-3 py-2" placeholder="Work Email" type="email" aria-label="Work Email" />
-              <input className="bg-black/50 border border-white/10 rounded px-3 py-2" placeholder="Role" aria-label="Role" />
-              <input className="bg-black/50 border border-white/10 rounded px-3 py-2" placeholder="Canton Project" aria-label="Canton Project" />
-              <select className="bg-black/50 border border-white/10 rounded px-3 py-2" aria-label="Biggest Current Blocker">
-                <option>Discovery is fragmented</option>
-                <option>Coordination/legal delays</option>
-                <option>No repeatable blueprint</option>
-                <option>Need proof before scaling</option>
-              </select>
-              <button type="submit" className="btn-outline rounded px-5 py-3 nav-compact">Get My First 5 Opportunities</button>
-              <p className="text-white/60 text-sm">We review each application to keep quality high. If accepted, we’ll schedule your blueprint session within 72 hours.</p>
-            </form>
-          </div>
-        </section>
+        {/* Application form removed */}
 
-        {/* FAQ */}
-        <section id="faq" className="section border-t border-white/10">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <p className="kicker mb-4">FAQ</p>
-            <div className="space-y-4 max-w-4xl text-white/80">
-              <QA q="Are you another marketplace?" a="No. We’re the acceleration layer that coordinates who-needs-who and how they connect—then automates execution." />
-              <QA q="What if our use case is niche?" a="That’s where modeling helps. We map capabilities, needs, patterns, and trust to surface non-obvious matches." />
-              <QA q="How do rewards work?" a="Publish a blueprint. When others adopt it, royalties flow in $CC. Activity Markers recognize genuine coordination." />
-              <QA q="Who do we talk to?" a="Liz Towler — +44 7549-024-609 • liz@towleradvisory.com" />
-          </div>
-          </div>
-        </section>
       </main>
 
-      <footer className="py-12 text-center text-white/60 nav-compact">
-        © {new Date().getFullYear()} FlowRYD
+      {/* Footer */}
+      <footer className="border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-white/80">
+            <div>
+              <div className="nav-compact mb-3">SOCIAL MEDIA</div>
+              <ul className="space-y-2 text-white/60 nav-compact">
+                <li><a href="#">Telegram</a></li>
+                <li><a href="#">Discord</a></li>
+                <li><a href="#">X (Twitter)</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
+            <div>
+              <div className="nav-compact mb-3">RESOURCES</div>
+              <ul className="space-y-2">
+                <li className="text-2xl">Whitepaper</li>
+                <li className="text-2xl">Documentation</li>
+              </ul>
+            </div>
+            <div>
+              <div className="nav-compact mb-3">FOR THE DEVELOPERS</div>
+              <ul className="space-y-2 text-white/60 nav-compact">
+                <li><a href="#">Developer Assistance</a></li>
+                <li><a href="#">FlowRyd Scan</a></li>
+                <li><a href="#">FlowRyd Github</a></li>
+              </ul>
+            </div>
+            <div>
+              <div className="nav-compact mb-3">ECOSYSTEM</div>
+              <ul className="space-y-2 text-white/60 nav-compact">
+                <li><a href="#">Application</a></li>
+                <li><a href="#">Submission Form</a></li>
+              </ul>
+            </div>
+            <div>
+              <div className="nav-compact mb-3">CAREERS</div>
+              <div className="text-green-400 nav-compact">[12] WE’RE HIRING</div>
+            </div>
+          </div>
+
+          <div className="mt-12 flex flex-col md:flex-row items-center justify-between text-white/60 nav-compact gap-4">
+            <div className="flex items-center gap-6">
+              <a href="#">Media Kit</a>
+              <a href="#">Terms of Use</a>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Cookie Policy</a>
+            </div>
+            <div>© {new Date().getFullYear()} FlowRYD</div>
+          </div>
+        </div>
       </footer>
     </div>
   );
@@ -201,6 +308,16 @@ function Stat({ label, value }: { label: string; value: string }) {
     <div className="p-6 rounded border border-white/10 bg-muted/30">
       <div className="text-3xl font-semibold">{value}</div>
       <div className="mt-1 text-white/60 nav-compact">{label}</div>
+    </div>
+  );
+}
+
+function PrincipleCard({ index, title, body }: { index: string; title: string; body: string }) {
+  return (
+    <div className="p-6 rounded border border-white/10 bg-muted/30">
+      <div className="nav-compact text-white/70 mb-2">{index}</div>
+      <h3 className="mb-2 font-medium">{title}</h3>
+      <p className="text-white/70">{body}</p>
     </div>
   );
 }
@@ -219,6 +336,170 @@ function QA({ q, a }: { q: string; a: string }) {
     <div>
       <div className="font-medium">{q}</div>
       <div className="text-white/70">{a}</div>
+    </div>
+  );
+}
+
+function VisualGridPanel() {
+  return (
+    <div className="relative h-[420px] md:h-[480px] rounded border border-white/10 overflow-hidden bg-black/40">
+      {/* Logos mode for the hero-positioning grid */}
+      <MatchingAnimation logos />
+    </div>
+  );
+}
+
+function FeatureCard({ index, title, body }: { index: string; title: string; body: string; icon?: string }) {
+  return (
+    <div className="relative p-6 rounded border border-white/10 bg-black/40 flex flex-col justify-between min-h-[420px]">
+      <div>
+        <div className="flex items-center justify-between mb-6">
+          <div className="w-6 h-6 rounded-full border border-white/30" />
+          <div className="nav-compact text-white/60">{index}</div>
+        </div>
+        <h3 className="text-xl font-medium">{title}</h3>
+      </div>
+      <p className="text-white/60 text-sm mt-6">{body}</p>
+    </div>
+  );
+}
+
+function FlowDiagram() {
+  return (
+    <div className="relative h-96 w-full bg-black/50 border border-white/10 rounded-lg overflow-hidden">
+      {/* Background grid */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="w-full h-full" style={{
+          backgroundImage: `
+            repeating-linear-gradient(0deg, transparent 0px, transparent 23px, rgba(255,255,255,0.05) 23px, rgba(255,255,255,0.05) 24px),
+            repeating-linear-gradient(90deg, transparent 0px, transparent 23px, rgba(255,255,255,0.05) 23px, rgba(255,255,255,0.05) 24px)
+          `
+        }} />
+      </div>
+
+      {/* Flow animation */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="relative">
+          {/* Left side - Source */}
+          <div className="absolute left-0 top-1/2 -translate-y-1/2">
+            <div className="w-16 h-16 border-2 border-white/30 rounded-full flex items-center justify-center">
+              <div className="w-2 h-2 bg-white/50 rounded-full"></div>
+            </div>
+            <div className="mt-2 text-center text-white/60 text-sm">Source Chain</div>
+          </div>
+
+          {/* Animated arrow */}
+          <div className="absolute left-20 top-1/2 -translate-y-1/2 w-32 h-0.5 bg-gradient-to-r from-white/20 to-white/60">
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-0 h-0 border-l-4 border-l-white/60 border-t-2 border-t-transparent border-b-2 border-b-transparent animate-pulse"></div>
+          </div>
+
+          {/* Center - Executor */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div className="w-20 h-20 border-2 border-white/40 rounded-full flex items-center justify-center bg-white/5">
+              <div className="w-8 h-8 border border-white/60 rounded-full flex items-center justify-center">
+                <div className="w-1 h-4 bg-white/60 rounded-full animate-pulse"></div>
+              </div>
+            </div>
+            <div className="mt-2 text-center text-white/60 text-sm">Off Chain<br/>Infrastructure</div>
+          </div>
+
+          {/* Right side - Destination */}
+          <div className="absolute right-0 top-1/2 -translate-y-1/2">
+            <div className="w-16 h-16 border-2 border-white/30 rounded-full flex items-center justify-center">
+              <div className="w-2 h-2 bg-white/50 rounded-full"></div>
+            </div>
+            <div className="mt-2 text-center text-white/60 text-sm">Destination Chain</div>
+          </div>
+
+          {/* Bottom security stack */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
+            <div className="flex space-x-2">
+              <div className="w-8 h-6 border border-white/30 rounded bg-white/5"></div>
+              <div className="w-8 h-6 border border-white/30 rounded bg-white/5"></div>
+              <div className="w-8 h-6 border border-white/30 rounded bg-white/5"></div>
+            </div>
+            <div className="text-center text-white/60 text-xs mt-1">Security Stack (DVNs)</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Animated particles */}
+      <div className="absolute inset-0">
+        {[...Array(6)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-white/40 rounded-full animate-ping"
+            style={{
+              left: `${20 + Math.random() * 60}%`,
+              top: `${30 + Math.random() * 40}%`,
+              animationDelay: `${Math.random() * 2}s`,
+              animationDuration: `${2 + Math.random() * 2}s`
+            }}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function FlowDiagramDetailed() {
+  const rays = Array.from({ length: 12 });
+  return (
+    <div className="relative w-full overflow-hidden rounded-lg border border-white/10 diagram-grid">
+      {/* Columns */}
+      <div className="grid grid-cols-12 gap-0">
+        <div className="col-span-12 text-center nav-compact py-2 border-b border-white/10">OFF CHAIN INFRASTRUCTURE</div>
+      </div>
+
+      <div className="grid grid-cols-12 gap-0 text-white/70">
+        {/* Left labels */}
+        <div className="col-span-2 nav-compact p-3 border-r border-white/10">SOURCE CHAIN</div>
+        <div className="col-span-8 p-3 anim-scan"></div>
+        <div className="col-span-2 nav-compact p-3 border-l border-white/10 text-right">DESTINATION CHAIN</div>
+      </div>
+
+      {/* Middle rows */}
+      <div className="grid grid-cols-12 gap-0 text-white/80">
+        <div className="col-span-2 nav-compact p-3 border-t border-white/10">OAPP</div>
+        <div className="col-span-8 border-t border-white/10"></div>
+        <div className="col-span-2 nav-compact p-3 border-t border-white/10 text-right">OAPP</div>
+
+        <div className="col-span-2 nav-compact p-3 border-t border-white/10">ENDPOINT</div>
+        <div className="col-span-8 relative border-t border-white/10">
+          {/* executor */}
+          <div className="absolute right-[28%] top-6 border border-white/20 rounded p-2">
+            <div className="nav-compact text-center mb-2">EXECUTOR</div>
+            <div className="executor-burst mx-auto relative">
+              {rays.map((_, i) => (
+                <span key={i} style={{ transform: `translate(-50%, -50%) rotate(${(i * 360) / rays.length}deg)` }} />
+              ))}
+            </div>
+          </div>
+          {/* Animated path connecting left to right through executor */}
+          <svg className="absolute left-0 right-0 top-0 h-40" viewBox="0 0 1000 160" preserveAspectRatio="none">
+            <path className="draw-path" d="M 40 80 C 200 80, 400 20, 560 80 S 880 140, 960 80" />
+          </svg>
+        </div>
+        <div className="col-span-2 nav-compact p-3 border-t border-white/10 text-right">ENDPOINT</div>
+
+        <div className="col-span-2 nav-compact p-3 border-t border-white/10">MESSAGE LIB</div>
+        <div className="col-span-8 border-t border-white/10"></div>
+        <div className="col-span-2 nav-compact p-3 border-t border-white/10 text-right">MESSAGE LIB</div>
+      </div>
+
+      {/* Security stack */}
+      <div className="relative border-t border-white/10">
+        <div className="mx-auto my-6 w-[80%] border border-white/20 p-3 rounded">
+          <div className="nav-compact text-center mb-3">SECURITY STACK (DVNs)</div>
+          <div className="grid grid-cols-4 gap-4">
+            {[0, 1, 2, 3].map((idx) => (
+              <div key={idx} className="relative aspect-square rounded-full border-2 border-white/50 flex items-center justify-center">
+                <div className={`absolute inset-2 rounded-full border-2 ${idx === 1 ? 'border-green-400/70' : 'border-white/30'}`}></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
