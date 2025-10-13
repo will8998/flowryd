@@ -5,7 +5,7 @@ import { motion, useAnimation } from "framer-motion";
 
 type Anchor = { x: number; y: number }; // normalized (0..1)
 
-const DURATION = 8; // seconds (full loop)
+// const DURATION = 8; // seconds (full loop) // reserved
 
 function useContainerSize(ref: React.RefObject<HTMLDivElement>) {
   const [size, setSize] = useState({ w: 0, h: 0 });
@@ -93,6 +93,7 @@ function TriangleGlyph({ size = 58 }: { size?: number }) {
 }
 
 // Simple monochrome logo SVGs (minimalist)
+/*
 function SlackLogo({ size = 52 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 56 56" className="text-white/90" fill="none">
@@ -144,10 +145,12 @@ function LinkedInLogo({ size = 48 }: { size?: number }) {
     </svg>
   );
 }
+*/
 
 export default function MatchingAnimation({ logos = false }: { logos?: boolean }) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { w, h } = useContainerSize(containerRef);
+  // cast to satisfy strict RefObject<HTMLDivElement>
+  const { w, h } = useContainerSize(containerRef as unknown as React.RefObject<HTMLDivElement>);
   const grid = useMemo(() => anchors3x3(), []);
 
   // support up to 4 elements; use first N based on mode
@@ -245,7 +248,7 @@ export default function MatchingAnimation({ logos = false }: { logos?: boolean }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const pathCoords = useMemo(() => points.map(toPx), [points, w, h]);
+  const pathCoords = useMemo(() => points.map(toPx), [points, w, h, toPx]);
 
   return (
     <div ref={containerRef} className="relative w-full h-full overflow-hidden bg-black">

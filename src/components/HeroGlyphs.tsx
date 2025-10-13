@@ -86,7 +86,7 @@ export default function HeroGlyphs() {
       const grid = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(6, 6, 0.1, 6, 6, 1)), new THREE.LineBasicMaterial({ color: PALETTE, transparent: true, opacity: 0.25 }));
       grid.position.z = -0.35;
       group.add(grid);
-      (group as any).tick = (t: number) => {
+      (group.userData as { tick?: (t: number) => void }).tick = (t: number) => {
         orbit.rotation.z = t * 0.4;
         group.rotation.z = Math.sin(t * 0.2) * 0.15;
       };
@@ -103,7 +103,7 @@ export default function HeroGlyphs() {
       [new THREE.Vector3(c, c, 0), new THREE.Vector3(-c, c, 0), new THREE.Vector3(-c, -c, 0), new THREE.Vector3(c, -c, 0)].forEach((p) =>
         group.add(addNode(p, PALETTE, 0.22))
       );
-      (group as any).tick = (t: number) => {
+      (group.userData as { tick?: (t: number) => void }).tick = (t: number) => {
         group.rotation.x = Math.sin(t * 0.35) * 0.25 + 0.3;
         group.rotation.y = t * 0.25;
       };
@@ -131,7 +131,7 @@ export default function HeroGlyphs() {
         const a = i * ((Math.PI * 2) / 3) - Math.PI / 2;
         group.add(addNode(new THREE.Vector3(Math.cos(a) * r, Math.sin(a) * r, 0), PALETTE, 0.24));
       }
-      (group as any).tick = (t: number) => {
+      (group.userData as { tick?: (t: number) => void }).tick = (t: number) => {
         group.rotation.z = t * 0.3 + 0.3;
       };
       return group;
@@ -175,14 +175,18 @@ export default function HeroGlyphs() {
     const stars = new THREE.Points(starGeo, new THREE.PointsMaterial({ size: 0.6, color: PALETTE, transparent: true, opacity: 0.35 }));
     scene.add(stars);
 
-    let start = performance.now();
+    const start = performance.now();
+    const glyphs: THREE.Group[] = [glyphA, glyphB, glyphC];
     const animate = () => {
       const t = (performance.now() - start) / 1000;
       [tubeAB, tubeBC, tubeCA].forEach((m, i) => {
         const k = 1.0 + Math.sin(t * (1.2 + 0.2 * i)) * 0.25;
         (m.material as THREE.MeshStandardMaterial).emissiveIntensity = 0.9 * k;
       });
-      [glyphA, glyphB, glyphC].forEach((g: any) => g.tick && g.tick(t));
+      glyphs.forEach((g) => {
+        const tick = (g.userData as { tick?: (v: number) => void }).tick;
+        if (tick) tick(t);
+      });
       stars.rotation.y = t * 0.01;
       renderer.render(scene, camera);
       requestAnimationFrame(animate);
