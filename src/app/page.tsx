@@ -6,8 +6,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="relative min-h-screen text-foreground bg-background">
-      {/* Sticky top CTA */}
-      <a href="#apply" className="fixed bottom-6 right-6 z-50 nav-compact btn-outline rounded px-4 py-3 bg-black/50 backdrop-blur border-white/20 hover:border-white/40">Get My First 5 Opportunities</a>
+      {/* Sticky CTA removed */}
       {/* NAV */}
       <header className="fixed top-0 inset-x-0 z-50 border-b border-white/10 bg-background/60 backdrop-blur">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
@@ -289,8 +288,10 @@ export default function Home() {
               </div>
               <div className="panel p-3 md:col-span-4">
                 <div className="nav-compact mb-2">MATCHING ENGINE <span className="text-white/50">— Matching & validation</span></div>
-                <div className="flex items-center justify-center py-10">
-                  <img src="/flow.svg" alt="FlowRyd Flow Logo" className="flow-logo-anim" />
+                <div className="glow-bar-list">
+                  {Array.from({ length: 8 }).map((_, i) => (
+                    <div key={i} className="glow-bar" style={{ animationDelay: `${i*0.25}s` }} />
+                  ))}
                 </div>
               </div>
               <div className="panel p-3 md:col-span-4">
@@ -350,48 +351,16 @@ export default function Home() {
           <div className="mb-8">
             <img src="/flowrydlogo.svg" alt="FlowRyd" className="h-8 w-auto" />
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-white/80">
-            <div>
-              <div className="nav-compact mb-3">DISCOVER</div>
-              <ul className="space-y-2 text-white/70 list-none">
-                <li><a href="#" className="hover:text-white">Position Analysis</a></li>
-                <li><a href="#" className="hover:text-white">Advantage Mapping</a></li>
-                <li><a href="#" className="hover:text-white">Opportunity Identification</a></li>
-              </ul>
-            </div>
-            <div>
-              <div className="nav-compact mb-3">NETWORK</div>
-              <ul className="space-y-2 text-white/70 list-none">
-                <li><a href="#" className="hover:text-white">Compatible Matching</a></li>
-                <li><a href="#" className="hover:text-white">Blueprint Library</a></li>
-                <li><a href="#" className="hover:text-white">Strategy Patterns</a></li>
-              </ul>
-            </div>
-            <div>
-              <div className="nav-compact mb-3">ADVANTAGE</div>
-              <ul className="space-y-2 text-white/70 list-none">
-                <li><a href="#" className="hover:text-white">Partnership Execution</a></li>
-                <li><a href="#" className="hover:text-white">Workflow Deployment</a></li>
-                <li><a href="#" className="hover:text-white">Competitive Edge</a></li>
-              </ul>
-            </div>
-            <div>
-              <div className="nav-compact mb-3">ECOSYSTEM</div>
-              <ul className="space-y-2 text-white/70 list-none">
-                <li><a href="#" className="hover:text-white">Institutions</a></li>
-                <li><a href="#" className="hover:text-white">Builders</a></li>
-                <li><a href="#" className="hover:text-white">Capital</a></li>
-                <li><a href="#" className="hover:text-white">Canton Network</a></li>
-              </ul>
-            </div>
-          </div>
+          {/* Footer links hidden for now */}
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-8 text-white/80" />
 
+          {/* Legal links */}
           <div className="mt-12 flex flex-col md:flex-row items-center justify-between text-white/60 nav-compact gap-4">
             <div className="flex items-center gap-6">
-              <a href="#">Media Kit</a>
-              <a href="#">Terms of Use</a>
-              <a href="#">Privacy Policy</a>
-              <a href="#">Cookie Policy</a>
+              <a href="/media-kit">Media Kit</a>
+              <a href="/terms">Terms of Use</a>
+              <a href="/privacy">Privacy Policy</a>
+              <a href="/cookies">Cookie Policy</a>
             </div>
             <div>© {new Date().getFullYear()} FlowRYD</div>
           </div>

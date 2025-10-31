@@ -13,8 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FlowRYD — Omnichain Gaming Infrastructure",
-  description: "Build games omnichain. One protocol. Any blockchain.",
+  title: "FlowRyd — Decode Your Network Advantage | Matching, Modeling, Automation",
+  description:
+    "FlowRyd decodes your position, finds compatible partners, and deploys proven workflows. Turn connections into flows with matching, modeling and automation.",
+  icons: {
+    icon: "/flow.svg",
+  },
 };
 
 export default function RootLayout({
