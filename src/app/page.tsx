@@ -7,21 +7,7 @@ export default function Home() {
   return (
     <div className="relative min-h-screen text-foreground bg-background">
       {/* Sticky CTA removed */}
-      {/* NAV */}
-      <header className="fixed top-0 inset-x-0 z-50 border-b border-white/10 bg-background/60 backdrop-blur">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3" aria-label="FlowRyd Home">
-            <img src="/flowrydlogo.svg" alt="FlowRyd" className="h-6 w-auto" />
-          </Link>
-          <nav className="hidden md:flex items-center gap-6 nav-compact">
-            <a href="#problem" className="text-white/70 hover:text-white">Problem</a>
-            <a href="#what" className="text-white/70 hover:text-white">With FlowRyd</a>
-            <a href="#dashboard" className="text-white/70 hover:text-white">How it Works</a>
-            <a href="#diagram" className="text-white/70 hover:text-white">Flow</a>
-          </nav>
-          <a href="/onboarding" className="nav-compact btn-outline px-4 py-2 rounded">Get Started</a>
-        </div>
-      </header>
+      {/* Header moved to layout */}
 
       {/* HERO (LayerZero-like structure) */}
       <section className="lzr-background pt-24 md:pt-28 relative">
@@ -314,17 +300,17 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-semibold mb-4">Get Started Now.</h2>
             <p className="text-white/70 max-w-3xl mb-8">FlowRyd gives teams the acceleration layer to coordinate participants, reuse blueprints, and move from talks to shipped flows in weeks.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <a href="/onboarding" title="Join the Canton coordination layer and start matching flows instantly." className="group rounded border border-white/20 hover:border-white/50 bg-black/30 px-5 py-4 flex items-center justify-between">
+              <a href="#" aria-disabled="true" title="Coming soon" className="group rounded border border-white/20 bg-black/30 px-5 py-4 flex items-center justify-between opacity-60 cursor-not-allowed pointer-events-none">
                 <div>
-                  <div className="nav-compact mb-1">Onboard as Node →</div>
-                  <div className="text-white/60 text-sm">Ideal for builders, validators, or apps joining the FlowRyd network.</div>
+                  <div className="nav-compact mb-1">Coming Soon</div>
+                  <div className="text-white/60 text-sm">Builders, validators, and apps — coming soon.</div>
                 </div>
                 <span className="transition-transform group-hover:translate-x-0.5">↗</span>
               </a>
-              <a href="/contact" title="Book a session with our team to explore integration and early access." className="group rounded border border-white/20 hover:border-white/50 bg-black/30 px-5 py-4 flex items-center justify-between">
+              <a href="#" aria-disabled="true" title="Coming soon" className="group rounded border border-white/20 bg-black/30 px-5 py-4 flex items-center justify-between opacity-60 cursor-not-allowed pointer-events-none">
                 <div>
-                  <div className="nav-compact mb-1">Schedule a Call →</div>
-                  <div className="text-white/60 text-sm">Ideal for partners, enterprises, and BD contacts.</div>
+                  <div className="nav-compact mb-1">Coming Soon</div>
+                  <div className="text-white/60 text-sm">Partners and enterprises — coming soon.</div>
                 </div>
                 <span className="transition-transform group-hover:translate-x-0.5">↗</span>
           </a>
@@ -345,27 +331,7 @@ export default function Home() {
 
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
-          <div className="mb-8">
-            <img src="/flowrydlogo.svg" alt="FlowRyd" className="h-8 w-auto" />
-          </div>
-          {/* Footer links hidden for now */}
-          <div className="grid grid-cols-1 md:grid-cols-1 gap-8 text-white/80" />
-
-          {/* Legal links */}
-          <div className="mt-12 flex flex-col md:flex-row items-center justify-between text-white/60 nav-compact gap-4">
-            <div className="flex items-center gap-6">
-              <a href="/media-kit">Media Kit</a>
-              <a href="/terms">Terms of Use</a>
-              <a href="/privacy">Privacy Policy</a>
-              <a href="/cookies">Cookie Policy</a>
-            </div>
-            <div>© {new Date().getFullYear()} FlowRYD</div>
-          </div>
-        </div>
-      </footer>
+      {/* Footer moved to layout */}
     </div>
   );
 }
