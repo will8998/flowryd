@@ -40,9 +40,9 @@ export default function TypeWord({
   }, [txt, del, i, list, typingSpeedMs, deletingSpeedMs, pauseMs]);
 
   return (
-    <span className={className} style={{ color: "#eef895" }}>
+    <span className={className} style={{ color: "#96FFC2" }}>
       {txt}
-      <span className="ml-1 inline-block w-[2px] h-[0.9em] align-[-0.05em] bg-[#eef895] animate-pulse" />
+      <span className="ml-1 inline-block w-[2px] h-[0.9em] align-[-0.05em] bg-[#96FFC2] animate-pulse" />
     </span>
   );
 }

@@ -1,6 +1,7 @@
 import MatchingAnimation from "@/components/MatchingAnimation";
 import TypeWord from "@/components/TypeWord";
-import ClientHero from "@/components/ClientHero";
+import Framework from "@/components/Framework";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -10,10 +11,9 @@ export default function Home() {
       {/* NAV */}
       <header className="fixed top-0 inset-x-0 z-50 border-b border-white/10 bg-background/60 backdrop-blur">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="h-6 w-6 rounded-full bg-white" aria-hidden />
-            <span className="nav-compact">FlowRYD</span>
-          </div>
+          <Link href="/" className="flex items-center gap-3" aria-label="FlowRyd Home">
+            <img src="/flowrydlogo.svg" alt="FlowRyd" className="h-6 w-auto" />
+          </Link>
           <nav className="hidden md:flex items-center gap-6 nav-compact">
             <a href="#problem" className="text-white/70 hover:text-white">Problem</a>
             <a href="#what" className="text-white/70 hover:text-white">With FlowRyd</a>
@@ -33,22 +33,34 @@ export default function Home() {
               <h1 className="headline-xl tracking-tight">
                 <span className="block text-[56px] md:text-[96px] lg:text-[120px]">Flow</span>
                 <span className="block text-[56px] md:text-[96px] lg:text-[120px]">
-                  <TypeWord className="font-inherit" words={["FAST", "QUICK", "RYD"]} />
+                  <TypeWord className="font-inherit" words={["Fast", "Right", "Ryd"]} />
                 </span>
                 <span className="block text-[56px] md:text-[96px] lg:text-[120px]">Together</span>
               </h1>
-              <div className="space-y-2">
-                <div className="kicker">From ‘let’s connect’ to ‘we shipped’ in 6 weeks.</div>
-                <p className="text-white/70 max-w-3xl">The acceleration layer of Canton, connecting participants, blueprints, and capital to turn coordination into real market activity.</p>
+              <div className="space-y-4">
+                <div className="kicker">DECODE YOUR NETWORK ADVANTAGE</div>
+                <div className="text-white/70 max-w-3xl space-y-3">
+                  <p className="text-lg md:text-xl leading-relaxed">
+                    30,000 participants. Half a million daily transactions.
+                  </p>
+                  <p className="text-lg md:text-xl leading-relaxed">
+                    Every node is different — but connected.
+                  </p>
+                  <p className="text-lg md:text-xl leading-relaxed">
+                    Where you sit defines what you see, who you connect with, and the value you can unlock.
+                  </p>
+                </div>
               </div>
               <div>
-                <a href="#apply" className="group inline-flex items-center justify-between w-[320px] md:w-[420px] h-12 border border-white/30 hover:border-white/60 rounded px-4 nav-compact">
-                  <span>START BUILDING</span>
+                <a href="#apply" className="group inline-flex items-center justify-between w-full md:w-[720px] min-h-12 border border-white/30 hover:border-white/60 rounded px-4 py-3">
+                  <span className="text-white/90 text-base md:text-lg leading-snug">
+                    Find your flow, position your advantage, and build what others can’t.
+                  </span>
                   <span className="transition-transform group-hover:translate-x-0.5">↗</span>
                 </a>
               </div>
             </div>
-            <div className="relative h-[320px] md:h-[420px] lg:h-[520px]"><ClientHero /></div>
+            <div className="relative h-[320px] md:h-[420px] lg:h-[520px]"></div>
           </div>
         </div>
       </section>
@@ -69,53 +81,144 @@ export default function Home() {
                       backgroundImage: `repeating-linear-gradient(0deg, transparent 0px, transparent 23px, rgba(255,255,255,0.06) 23px, rgba(255,255,255,0.06) 24px),repeating-linear-gradient(90deg, transparent 0px, transparent 23px, rgba(255,255,255,0.06) 23px, rgba(255,255,255,0.06) 24px)`
                     }} />
                   </div>
-                  {/* decorative tiles */}
+                  {/* 3x3 icon tiles — sequential fade one-at-a-time */}
                   <div className="absolute inset-6 grid grid-cols-3 grid-rows-3 gap-6">
-                    <div className="border border-white/10 bg-black/30 rounded" />
-                    <div className="border border-white/10 bg-black/30 rounded" />
-                    <div className="border border-white/10 bg-black/30 rounded" />
-                    <div className="border border-white/10 bg-black/30 rounded" />
-                    <div className="border border-white/10 bg-black/30 rounded" />
-                    <div className="border border-white/10 bg-black/30 rounded" />
-                    <div className="border border-white/10 bg-black/30 rounded" />
-                    <div className="border border-white/10 bg-black/30 rounded" />
-                    <div className="border border-white/10 bg-black/30 rounded" />
+                    {Array.from({ length: 9 }).map((_, i) => (
+                      <div
+                        key={i}
+                        className="pulse-tile border border-white/10 bg-black/30 rounded flex items-center justify-center"
+                        style={{ ["--d" as string]: `${i * 1.2}s` }}
+                        aria-hidden
+                      >
+                        {/* choose large icon by index: plane, dice, clock, grid */}
+                        {(() => {
+                          switch (i % 4) {
+                            case 0:
+                              return (
+                                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" className="text-white/80">
+                                  <path d="M3 11l18-8-8 18-2-7-8-3z" stroke="currentColor" strokeWidth="1.5" fill="none" />
+                                </svg>
+                              );
+                            case 1:
+                              return (
+                                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" className="text-white/80">
+                                  <rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" strokeWidth="1.5" />
+                                  <circle cx="9" cy="9" r="1.8" fill="currentColor" />
+                                  <circle cx="15" cy="15" r="1.8" fill="currentColor" />
+                                </svg>
+                              );
+                            case 2:
+                              return (
+                                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" className="text-white/80">
+                                  <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.5" />
+                                  <path d="M12 7v6l4 2" stroke="currentColor" strokeWidth="1.5" />
+                                </svg>
+                              );
+                            default:
+                              return (
+                                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" className="text-white/80">
+                                  <rect x="5" y="5" width="5" height="5" stroke="currentColor" strokeWidth="1.5" />
+                                  <rect x="14" y="5" width="5" height="5" stroke="currentColor" strokeWidth="1.5" />
+                                  <rect x="5" y="14" width="5" height="5" stroke="currentColor" strokeWidth="1.5" />
+                                  <rect x="14" y="14" width="5" height="5" stroke="currentColor" strokeWidth="1.5" />
+                                </svg>
+                              );
+                          }
+                        })()}
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
 
               {/* Right content panel (text + CTAs) */}
               <div className="md:col-span-7">
-                <div className="nav-compact mb-4">POSITIONING</div>
-                <p className="text-white/70 text-2xl md:text-4xl leading-snug">
-                  You already know your use case. What you don’t know is who you need to make it work.
-                  <span className="text-white"> Discovery is broken</span> — partners are scattered across LinkedIn, Slack, Discord, Telegram;
-                  <span className="text-white"> collaboration is slow</span> — multi‑party flows mean endless meetings and months of legal; and
-                  <span className="text-white"> there’s no blueprint</span> — every on‑chain flow gets rebuilt from scratch.
-                </p>
-                <p className="mt-6 text-white/60">Bottom line: Technology works. Participation is growing. But coordination doesn’t scale—and that’s how great networks die waiting.</p>
+                <div className="nav-compact mb-6">THE PROBLEM</div>
 
-                {/* CTA row */}
-                <div className="mt-10 flex flex-col sm:flex-row gap-3">
-                  <a className="group inline-flex items-center justify-between sm:w-[280px] h-12 border border-white/20 hover:border-white/50 rounded px-4 nav-compact" href="#apply">
-                    <span className="flex items-center gap-2">
-                      <img src="/file.svg" alt="doc" className="w-4 h-4 opacity-80" /> BLUEPRINT
-                    </span>
-                    <span className="transition-transform group-hover:translate-x-0.5">↗</span>
-                  </a>
-                  <a className="group inline-flex items-center justify-between sm:w-[280px] h-12 border border-white/20 hover:border-white/50 rounded px-4 nav-compact" href="#what">
-                    <span className="flex items-center gap-2">
-                      <img src="/globe.svg" alt="github" className="w-4 h-4 opacity-80" /> ECOSYSTEM
-                    </span>
-                    <span className="transition-transform group-hover:translate-x-0.5">↗</span>
-                  </a>
-                  <a className="group inline-flex items-center justify-between sm:w-[280px] h-12 border border-white/20 hover:border-white/50 rounded px-4 nav-compact" href="#faq">
-                    <span className="flex items-center gap-2">
-                      <img src="/window.svg" alt="blog" className="w-4 h-4 opacity-80" /> BLOG
-                    </span>
-                    <span className="transition-transform group-hover:translate-x-0.5">↗</span>
-                  </a>
+                <div className="space-y-6">
+                  <h2 className="text-white text-2xl md:text-3xl font-medium leading-tight">
+                    Your Position Is Unique. Your Intelligence Isn’t.
+                  </h2>
+
+                  <p className="text-white/80 text-lg leading-relaxed">
+                    You’re in a network early. Made the bet. Committed resources.<br />
+                    How to convert this into market share?
+                  </p>
+
+                  <div className="space-y-4">
+                    <h3 className="text-white text-xl font-medium">What you’re doing now</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      {/* Box 1 */}
+                      <div className="flex items-start gap-3 p-4 rounded border border-white/10 bg-black/30">
+                        <div className="shrink-0 w-8 h-8 rounded-full border border-white/30 flex items-center justify-center">
+                          {/* paper plane */}
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-white/80">
+                            <path d="M3 11l18-8-8 18-2-7-8-3z" stroke="currentColor" strokeWidth="1.5" fill="none" />
+                          </svg>
+                        </div>
+                        <div>
+                          <div className="text-white font-medium">Random outreach</div>
+                          <div className="text-white/70">Instead of understanding who fits your position</div>
+                        </div>
+                      </div>
+
+                      {/* Box 2 */}
+                      <div className="flex items-start gap-3 p-4 rounded border border-white/10 bg-black/30">
+                        <div className="shrink-0 w-8 h-8 rounded-full border border-white/30 flex items-center justify-center">
+                          {/* dice */}
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-white/80">
+                            <rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" strokeWidth="1.5" />
+                            <circle cx="9" cy="9" r="1.2" fill="currentColor" />
+                            <circle cx="15" cy="15" r="1.2" fill="currentColor" />
+                          </svg>
+                        </div>
+                        <div>
+                          <div className="text-white font-medium">Guessing on partners</div>
+                          <div className="text-white/70">Instead of knowing which match your capabilities</div>
+                        </div>
+                      </div>
+
+                      {/* Box 3 */}
+                      <div className="flex items-start gap-3 p-4 rounded border border-white/10 bg-black/30">
+                        <div className="shrink-0 w-8 h-8 rounded-full border border-white/30 flex items-center justify-center">
+                          {/* clock */}
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-white/80">
+                            <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.5" />
+                            <path d="M12 7v6l4 2" stroke="currentColor" strokeWidth="1.5" />
+                          </svg>
+                        </div>
+                        <div>
+                          <div className="text-white font-medium">Chasing yesterday’s wins</div>
+                          <div className="text-white/70">Instead of spotting patterns forming in your space</div>
+                        </div>
+                      </div>
+
+                      {/* Box 4 */}
+                      <div className="flex items-start gap-3 p-4 rounded border border-white/10 bg-black/30">
+                        <div className="shrink-0 w-8 h-8 rounded-full border border-white/30 flex items-center justify-center">
+                          {/* grid */}
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-white/80">
+                            <rect x="5" y="5" width="5" height="5" stroke="currentColor" strokeWidth="1.5" />
+                            <rect x="14" y="5" width="5" height="5" stroke="currentColor" strokeWidth="1.5" />
+                            <rect x="5" y="14" width="5" height="5" stroke="currentColor" strokeWidth="1.5" />
+                            <rect x="14" y="14" width="5" height="5" stroke="currentColor" strokeWidth="1.5" />
+                          </svg>
+                        </div>
+                        <div>
+                          <div className="text-white font-medium">Generic strategies</div>
+                          <div className="text-white/70">Instead of moves tailored to where you are</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-white/80 text-lg leading-relaxed border-l-2 border-white/20 pl-4">
+                    Your position determines what you can capture.<br />
+                    Generic intelligence can’t decode that.
+                  </p>
                 </div>
+
+                {/* CTA row removed as requested */}
               </div>
             </div>
           </div>
@@ -123,15 +226,12 @@ export default function Home() {
 
         <section id="what" className="section border-t border-white/10">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-5xl md:text-6xl font-semibold mb-10">With Flowryd</h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              {/* Left visual grid panel */}
-              <VisualGridPanel />
-              {/* Three cards in the reference style */}
-              <FeatureCard index="/ 01" title="Instant Matching" icon="ban" body="Your validator/app joins. FlowRyd shows 5 immediate opportunities aligned to your goals." />
-              <FeatureCard index="/ 02" title="Immutable Blueprints" icon="lock" body="The execution map is versioned and reusable; the pattern won’t drift as it scales." />
-              <FeatureCard index="/ 03" title="Permissionless Cadence" icon="link" body="Anyone can run the cadence and adopt the blueprint to generate more flows." />
+            <div className="mb-16">
+              <h2 className="text-5xl md:text-6xl font-semibold mb-6">The Framework</h2>
+              <p className="text-white/70 text-xl">Discover → Network → Advantage</p>
             </div>
+
+            <Framework />
           </div>
         </section>
 
@@ -144,7 +244,7 @@ export default function Home() {
             <div className="mb-2">
               <p className="kicker">How FlowRyd Works</p>
             </div>
-            <p className="text-white/70 mb-8">The Canton coordination engine — matching, modeling, and automating every step of multi-party market creation.</p>
+            <p className="text-white/70 mb-8">The FlowRyd coordination engine — matching, modeling, and automating every step of multi-party market creation.</p>
             <div className="grid grid-cols-1 md:grid-cols-12 gap-4 text-white/70">
               {/* five info boxes */}
               <div className="md:col-span-12 grid grid-cols-1 md:grid-cols-5 gap-4">
@@ -171,7 +271,7 @@ export default function Home() {
                 <div className="panel p-4">
                   <div className="nav-compact mb-1 text-white/60">5. Reward</div>
                   <div className="font-medium mb-1">Blueprint Marketplace & Rewards</div>
-                  <p className="text-white/80">Earn $CC rewards as your blueprints spread.</p>
+                  <p className="text-white/80">Earn $FLOWRYD rewards as your blueprints spread.</p>
                 </div>
               </div>
               {/* timeline rail */}
@@ -190,17 +290,15 @@ export default function Home() {
               </div>
               <div className="panel p-3 md:col-span-4">
                 <div className="nav-compact mb-2">MATCHING ENGINE <span className="text-white/50">— Matching & validation</span></div>
-                <div className="glow-bar-list">
-                  {Array.from({ length: 8 }).map((_, i) => (
-                    <div key={i} className="glow-bar" style={{ animationDelay: `${i*0.25}s` }} />
-                  ))}
+                <div className="flex items-center justify-center py-10">
+                  <img src="/flow.svg" alt="FlowRyd Flow Logo" className="flow-logo-anim" />
                 </div>
               </div>
               <div className="panel p-3 md:col-span-4">
-                <div className="nav-compact mb-2">CANTON</div>
+                <div className="nav-compact mb-2">FLOWRYD</div>
                 <div className="flicker py-10 diamond-pulse">
                   <div className="eth-diamond" />
-                  <div className="text-center mt-4 text-white/60 nav-compact">— Flow deployed on Canton</div>
+                  <div className="text-center mt-4 text-white/60 nav-compact">— Flow deployed on FlowRyd</div>
                 </div>
               </div>
             </div>
@@ -250,41 +348,42 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-white/80">
+          <div className="mb-8">
+            <img src="/flowrydlogo.svg" alt="FlowRyd" className="h-8 w-auto" />
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-white/80">
             <div>
-              <div className="nav-compact mb-3">SOCIAL MEDIA</div>
-              <ul className="space-y-2 text-white/60 nav-compact">
-                <li><a href="#">Telegram</a></li>
-                <li><a href="#">Discord</a></li>
-                <li><a href="#">X (Twitter)</a></li>
-                <li><a href="#">Blog</a></li>
+              <div className="nav-compact mb-3">DISCOVER</div>
+              <ul className="space-y-2 text-white/70 list-none">
+                <li><a href="#" className="hover:text-white">Position Analysis</a></li>
+                <li><a href="#" className="hover:text-white">Advantage Mapping</a></li>
+                <li><a href="#" className="hover:text-white">Opportunity Identification</a></li>
               </ul>
             </div>
             <div>
-              <div className="nav-compact mb-3">RESOURCES</div>
-              <ul className="space-y-2">
-                <li className="text-2xl">Whitepaper</li>
-                <li className="text-2xl">Documentation</li>
+              <div className="nav-compact mb-3">NETWORK</div>
+              <ul className="space-y-2 text-white/70 list-none">
+                <li><a href="#" className="hover:text-white">Compatible Matching</a></li>
+                <li><a href="#" className="hover:text-white">Blueprint Library</a></li>
+                <li><a href="#" className="hover:text-white">Strategy Patterns</a></li>
               </ul>
             </div>
             <div>
-              <div className="nav-compact mb-3">FOR THE DEVELOPERS</div>
-              <ul className="space-y-2 text-white/60 nav-compact">
-                <li><a href="#">Developer Assistance</a></li>
-                <li><a href="#">FlowRyd Scan</a></li>
-                <li><a href="#">FlowRyd Github</a></li>
+              <div className="nav-compact mb-3">ADVANTAGE</div>
+              <ul className="space-y-2 text-white/70 list-none">
+                <li><a href="#" className="hover:text-white">Partnership Execution</a></li>
+                <li><a href="#" className="hover:text-white">Workflow Deployment</a></li>
+                <li><a href="#" className="hover:text-white">Competitive Edge</a></li>
               </ul>
             </div>
             <div>
               <div className="nav-compact mb-3">ECOSYSTEM</div>
-              <ul className="space-y-2 text-white/60 nav-compact">
-                <li><a href="#">Application</a></li>
-                <li><a href="#">Submission Form</a></li>
+              <ul className="space-y-2 text-white/70 list-none">
+                <li><a href="#" className="hover:text-white">Institutions</a></li>
+                <li><a href="#" className="hover:text-white">Builders</a></li>
+                <li><a href="#" className="hover:text-white">Capital</a></li>
+                <li><a href="#" className="hover:text-white">Canton Network</a></li>
               </ul>
-            </div>
-            <div>
-              <div className="nav-compact mb-3">CAREERS</div>
-              <div className="text-green-400 nav-compact">[12] WE’RE HIRING</div>
             </div>
           </div>
 
