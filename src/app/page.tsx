@@ -19,7 +19,6 @@ export default function Home() {
             <a href="#what" className="text-white/70 hover:text-white">With FlowRyd</a>
             <a href="#dashboard" className="text-white/70 hover:text-white">How it Works</a>
             <a href="#diagram" className="text-white/70 hover:text-white">Flow</a>
-            <a href="#develop" className="text-white/70 hover:text-white">Develop</a>
           </nav>
           <a href="/onboarding" className="nav-compact btn-outline px-4 py-2 rounded">Get Started</a>
         </div>
