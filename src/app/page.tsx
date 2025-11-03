@@ -265,7 +265,7 @@ export default function Home() {
             </div>
 
             <Framework />
-            <div className="mt-8 border-t border-white/10 pt-6">
+            <div className="mt-8 border-t border-white/10 pt-6" id="intelligence">
               <div className="nav-compact text-white/70 mb-2">Active intelligence. Your advantage.</div>
               <div className="grid grid-cols-1 md:grid-cols-12 gap-4 text-white/70">
                 <div className="panel p-3 md:col-span-4 relative">

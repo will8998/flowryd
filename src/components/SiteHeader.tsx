@@ -8,10 +8,11 @@ export default function SiteHeader() {
           <img src="/flowrydlogo.svg" alt="Flowryd" className="h-6 w-auto" />
         </Link>
         <nav className="hidden md:flex items-center gap-6 nav-compact">
-          <a href="#problem" className="text-white/70 hover:text-white">Problem</a>
-          <a href="#what" className="text-white/70 hover:text-white">With Flowryd</a>
-          <a href="#dashboard" className="text-white/70 hover:text-white">How it Works</a>
-          <a href="#diagram" className="text-white/70 hover:text-white">Flow</a>
+          <a href="#problem" className="text-white/70 hover:text-white">Why</a>
+          <a href="#what" className="text-white/70 hover:text-white">Playbook</a>
+          <a href="#intelligence" className="text-white/70 hover:text-white">Intelligence</a>
+          <a href="#moment" className="text-white/70 hover:text-white">Momentum</a>
+          <a href="#develop" className="text-white/70 hover:text-white">Get Started</a>
         </nav>
         <a href="/media-kit" className="nav-compact btn-outline px-4 py-2 rounded">Media Kit</a>
       </div>
