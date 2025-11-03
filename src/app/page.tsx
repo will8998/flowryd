@@ -387,22 +387,20 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
             <h2 className="text-4xl md:text-5xl font-semibold mb-4">Get Started Now.</h2>
             <p className="text-white/70 max-w-3xl mb-8">Flowryd gives teams the acceleration layer to coordinate participants, reuse blueprints, and move from talks to shipped flows in weeks.</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <a href="#" aria-disabled="true" title="Coming soon" className="group rounded border border-white/20 bg-black/30 px-5 py-4 flex items-center justify-between opacity-60 cursor-not-allowed pointer-events-none">
+            <div className="grid grid-cols-1 gap-4">
+              <a
+                href="https://flowryd.typeform.com/to/z4N2MGrQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group rounded border border-white/20 hover:border-white/50 bg-black/30 px-5 py-4 flex items-center justify-between"
+              >
                 <div>
-                  <div className="nav-compact mb-1">Coming Soon</div>
-                  <div className="text-white/60 text-sm">Builders, validators, and apps — coming soon.</div>
+                  <div className="nav-compact mb-1">Sign Up</div>
+                  <div className="text-white/60 text-sm">Join Flowryd and get matched, modeled, and onboarded.</div>
                 </div>
                 <span className="transition-transform group-hover:translate-x-0.5">↗</span>
               </a>
-              <a href="#" aria-disabled="true" title="Coming soon" className="group rounded border border-white/20 bg-black/30 px-5 py-4 flex items-center justify-between opacity-60 cursor-not-allowed pointer-events-none">
-                <div>
-                  <div className="nav-compact mb-1">Coming Soon</div>
-                  <div className="text-white/60 text-sm">Partners and enterprises — coming soon.</div>
-                </div>
-                <span className="transition-transform group-hover:translate-x-0.5">↗</span>
-          </a>
-        </div>
+            </div>
           </div>
         </section>
 
