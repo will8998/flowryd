@@ -1,0 +1,10 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/favicon.ico/route": "/favicon.ico",
+  "/cookies/page": "/cookies",
+  "/onboarding/page": "/onboarding",
+  "/terms/page": "/terms",
+  "/media-kit/page": "/media-kit",
+  "/page": "/",
+  "/privacy/page": "/privacy"
+}

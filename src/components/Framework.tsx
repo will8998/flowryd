@@ -13,24 +13,27 @@ const CARDS: Array<{
 }> = [
   {
     key: "discover",
-    index: "/ 01",
-    title: "DISCOVER",
+    index: "01",
+    title: "Discover",
     subtitle: "Decode Your Position",
-    intro: "Connect your PartyID — FlowRyd reveals your full network position.",
+    intro:
+      "Understand who you're connected to, what workflows you participate in, and where opportunities exist",
   },
   {
     key: "network",
-    index: "/ 02",
-    title: "NETWORK",
-    subtitle: "Find Your Matches",
-    intro: "FlowRyd connects you with verified position-compatible partners.",
+    index: "02",
+    title: "Navigate",
+    subtitle: "Chart Your Path",
+    intro:
+      "Identify critical participants, prioritize connections, and map your path to network formation",
   },
   {
     key: "advantage",
-    index: "/ 03",
-    title: "ADVANTAGE",
-    subtitle: "Secure Your Edge",
-    intro: "Turn position intelligence into sustained competitive advantage.",
+    index: "03",
+    title: "Activate",
+    subtitle: "Execute Your Strategy",
+    intro:
+      "Orchestrate connections, trigger workflows, and accelerate on-chain value creation.",
   },
 ];
 
@@ -61,129 +64,7 @@ export default function Framework() {
           </button>
         ))}
       </div>
-
-      {/* Wide detail panel */}
-      <div className="mt-6 p-6 rounded border border-white/10 bg-black/50">
-        {active === "discover" && (
-          <div className="grid md:grid-cols-2 gap-6 text-white/80">
-            <div>
-              <h5 className="font-medium mb-3 text-white">Complete Position Intelligence</h5>
-              <ul className="space-y-2 text-white/80 list-none">
-                {[
-                  "Transaction behavior",
-                  "Partnership history",
-                  "Workflow participation",
-                  "Reward performance",
-                ].map((t) => (
-                  <li key={t} className="flex items-center gap-2">
-                    <svg width="8" height="8" viewBox="0 0 8 8" className="text-white/70">
-                      <circle cx="4" cy="4" r="3" fill="currentColor" />
-                    </svg>
-                    <span>{t}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h5 className="font-medium mb-3 text-white">Uncover Hidden Value</h5>
-              <ul className="space-y-2 text-white/80 list-none">
-                {[
-                  "Missed compatible partners",
-                  "Untapped advantages",
-                  "Emerging niches",
-                  "Strategic blind spots",
-                ].map((t) => (
-                  <li key={t} className="flex items-center gap-2">
-                    <svg width="8" height="8" viewBox="0 0 8 8" className="text-white/70">
-                      <circle cx="4" cy="4" r="3" fill="currentColor" />
-                    </svg>
-                    <span>{t}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="md:col-span-2 text-white/70">Your position learns and adapts with every connection.</div>
-          </div>
-        )}
-
-        {active === "network" && (
-          <div className="grid md:grid-cols-2 gap-6 text-white/80">
-            <div>
-              <h5 className="font-medium mb-3 text-white">Position-Based Connections</h5>
-              <ul className="space-y-2 list-none">
-                {[
-                  "Custody, settlement, and stablecoin partners that fit your profile",
-                  "Applications and workflows that complement your structure",
-                ].map((t) => (
-                  <li key={t} className="flex items-center gap-2">
-                    <svg width="8" height="8" viewBox="0 0 8 8" className="text-white/70">
-                      <circle cx="4" cy="4" r="3" fill="currentColor" />
-                    </svg>
-                    <span>{t}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h5 className="font-medium mb-3 text-white">Proven Blueprints</h5>
-              <ul className="space-y-2 list-none">
-                {[
-                  "Successful workflows from similar participants",
-                  "Validated partnership and strategy patterns",
-                ].map((t) => (
-                  <li key={t} className="flex items-center gap-2">
-                    <svg width="8" height="8" viewBox="0 0 8 8" className="text-white/70">
-                      <circle cx="4" cy="4" r="3" fill="currentColor" />
-                    </svg>
-                    <span>{t}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="md:col-span-2 text-white/70">No noise. No random networking — just position-verified matches.</div>
-          </div>
-        )}
-
-        {active === "advantage" && (
-          <div className="grid md:grid-cols-2 gap-6 text-white/80">
-            <div>
-              <h5 className="font-medium mb-3 text-white">Partnership Advantage</h5>
-              <ul className="space-y-2 list-none">
-                {[
-                  "Verified introductions (fit, not outreach)",
-                  "Strategic timing",
-                  "Success tracking",
-                ].map((t) => (
-                  <li key={t} className="flex items-center gap-2">
-                    <svg width="8" height="8" viewBox="0 0 8 8" className="text-white/70">
-                      <circle cx="4" cy="4" r="3" fill="currentColor" />
-                    </svg>
-                    <span>{t}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h5 className="font-medium mb-3 text-white">Workflow Advantage</h5>
-              <ul className="space-y-2 list-none">
-                {[
-                  "Tested blueprints",
-                  "Adaptive optimization",
-                  "Real-time intelligence",
-                ].map((t) => (
-                  <li key={t} className="flex items-center gap-2">
-                    <svg width="8" height="8" viewBox="0 0 8 8" className="text-white/70">
-                      <circle cx="4" cy="4" r="3" fill="currentColor" />
-                    </svg>
-                    <span>{t}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="md:col-span-2 text-white/70">Discover → Network → Advantage. Position mastered, edge secured.</div>
-          </div>
-        )}
-      </div>
+      
     </div>
   );
 }

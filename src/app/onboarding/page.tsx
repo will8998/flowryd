@@ -56,7 +56,7 @@ export default function OnboardingPage() {
         {/* header */}
         <div className="mb-8 text-center">
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">
-            Onboard your <span style={{ color: "#c4ff61" }}>FlowRyd</span> node
+            Onboard your <span style={{ color: "#c4ff61" }}>Flowryd</span> node
           </h1>
           <p className="text-white/60 mt-2">
             Configure your experience and preview high‑match opportunities in minutes.

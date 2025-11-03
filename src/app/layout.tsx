@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FlowRyd — Decode Your Network Advantage | Matching, Modeling, Automation",
+  title: "Flowryd — Decode Your Network Advantage | Matching, Modeling, Automation",
   description:
-    "FlowRyd decodes your position, finds compatible partners, and deploys proven workflows. Turn connections into flows with matching, modeling and automation.",
+    "Flowryd decodes your position, finds compatible partners, and deploys proven workflows. Turn connections into flows with matching, modeling and automation.",
   icons: {
     icon: "/flow.svg",
   },

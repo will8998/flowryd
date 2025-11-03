@@ -7,9 +7,9 @@ export default function MediaKitPage() {
         {/* Logo card */}
         <div className="rounded border border-white/10 bg-black/40 p-6">
           <h2 className="text-2xl font-medium text-white mb-4">Logo</h2>
-          <p className="mb-4">Download the FlowRyd primary logo in SVG format.</p>
+          <p className="mb-4">Download the Flowryd primary logo in SVG format.</p>
           <div className="flex items-center justify-center h-40 rounded bg-black/30 border border-white/10 mb-4">
-            <img src="/flowrydlogo.svg" alt="FlowRyd Logo" className="h-16 w-auto" />
+            <img src="/flowrydlogo.svg" alt="Flowryd Logo" className="h-16 w-auto" />
           </div>
           <div className="flex flex-wrap gap-3">
             <a
