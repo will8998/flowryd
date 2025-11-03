@@ -63,10 +63,13 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <a href="#apply" className="group inline-flex items-center justify-between w-full md:w-[720px] min-h-12 border border-white/30 hover:border-white/60 rounded px-4 py-3">
-                  <span className="text-white/90 text-base md:text-lg leading-snug">
-                    Find your flow. See what others can&apos;t. Build your advantage.
-                  </span>
+                <a
+                  href="https://flowryd.typeform.com/to/z4N2MGrQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center justify-between w-full md:w-[720px] min-h-12 border border-white/30 hover:border-white/60 rounded px-4 py-3"
+                >
+                  <span className="text-white/90 text-base md:text-lg leading-snug">Sign Up Now</span>
                   <span className="transition-transform group-hover:translate-x-0.5">↗</span>
                 </a>
               </div>
