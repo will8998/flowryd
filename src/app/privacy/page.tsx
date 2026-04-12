@@ -5,7 +5,7 @@ export default function PrivacyPage() {
       <div className="text-white/60 mb-6">Last Updated: October 31, 2025</div>
 
       <h2 className="text-2xl font-medium mt-6 mb-3 text-white">Introduction</h2>
-      <p className="mb-4">Flowryd (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our network orchestration platform for Canton Network liquidity pool participation. By using Flowryd, you agree to the practices described in this policy.</p>
+      <p className="mb-4">Flowryd OS (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;), operated by Towler Enterprises Limited, is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our platform for Canton Network transaction coordination. By using Flowryd OS, you agree to the practices described in this policy.</p>
 
       <h2 className="text-2xl font-medium mt-6 mb-3 text-white">Information We Collect</h2>
       <h3 className="text-lg font-medium mb-2 text-white">Information You Provide</h3>
@@ -97,7 +97,7 @@ export default function PrivacyPage() {
       </ul>
 
       <h2 className="text-2xl font-medium mt-6 mb-3 text-white">Changes to This Policy</h2>
-      <p className="mb-4">We may update this Privacy Policy periodically. Material changes will be communicated via email or platform notification. Continued use of Flowryd after changes constitutes acceptance of the updated policy.</p>
+      <p className="mb-4">We may update this Privacy Policy periodically. Material changes will be communicated via email or platform notification. Continued use of Flowryd OS after changes constitutes acceptance of the updated policy.</p>
 
       <h2 className="text-2xl font-medium mt-6 mb-3 text-white">Contact Us</h2>
       <p className="mb-1">For privacy questions or concerns, contact us at:</p>

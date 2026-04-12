@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-type Key = "discover" | "network" | "advantage";
+type Key = "dealroom" | "intelligence" | "marketplace";
 
 const CARDS: Array<{
   key: Key;
@@ -12,33 +12,33 @@ const CARDS: Array<{
   intro: string;
 }> = [
   {
-    key: "discover",
+    key: "dealroom",
     index: "01",
-    title: "Discover",
-    subtitle: "Decode Your Position",
+    title: "Deal Room",
+    subtitle: "Your room. All parties.",
     intro:
-      "Understand who you're connected to, what workflows you participate in, and where opportunities exist",
+      "Draft \u2192 Open \u2192 Negotiate \u2192 Locked \u2192 Committed. When it commits, it executes on Canton.",
   },
   {
-    key: "network",
+    key: "intelligence",
     index: "02",
-    title: "Navigate",
-    subtitle: "Chart Your Path",
+    title: "Intelligence",
+    subtitle: "Context for every deal.",
     intro:
-      "Identify critical participants, prioritize connections, and map your path to network formation",
+      "Canton market context filtered to what\u2019s relevant to your deal. Ryd AI at every step.",
   },
   {
-    key: "advantage",
+    key: "marketplace",
     index: "03",
-    title: "Activate",
-    subtitle: "Execute Your Strategy",
+    title: "Marketplace",
+    subtitle: "Coming soon.",
     intro:
-      "Orchestrate connections, trigger workflows, and accelerate on-chain value creation.",
+      "Inflight deals to join, App Stacks, and Canton tools. Coming soon.",
   },
 ];
 
 export default function Framework() {
-  const [active, setActive] = useState<Key>("discover");
+  const [active, setActive] = useState<Key>("dealroom");
 
   return (
     <div>

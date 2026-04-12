@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Flowryd — Decode Your Network Advantage | Matching, Modeling, Automation",
+  title: "Flowryd OS — Take the friction out of onchain transaction flows",
   description:
-    "Flowryd decodes your position, finds compatible partners, and deploys proven workflows. Turn connections into flows with matching, modeling and automation.",
+    "Flowryd OS is your playbook for institutional multi-party transactions on Canton Network. Open a deal, see exactly how it flows, and work it together in your own Deal Room.",
   icons: {
     icon: "/flow.svg",
   },

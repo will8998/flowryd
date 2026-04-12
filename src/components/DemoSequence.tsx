@@ -116,7 +116,7 @@ export default function DemoSequence() {
               phase === 'success' ? "bg-emerald-500 animate-pulse" : 
               phase === 'launching' ? "bg-amber-500 animate-pulse" : "bg-zinc-700"
             )}></div>
-            <span className="text-xs text-zinc-500 font-mono uppercase tracking-wider">Flowryd Protocol</span>
+            <span className="text-xs text-zinc-500 font-mono uppercase tracking-wider">Flowryd OS</span>
           </div>
           <div className="text-[10px] text-zinc-600 font-mono">
             {phase === 'marketplace' && 'SELECT_MODULES'}

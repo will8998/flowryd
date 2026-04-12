@@ -43,7 +43,7 @@ export const NavigateTeaser: React.FC<NavigateTeaserProps> = ({ onBack, network 
             PROFORMA GENERATED
           </motion.div>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-            Welcome to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Flowryd Navigate</span>
+            Welcome to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Flowryd OS Intelligence</span>
           </h1>
           <p className="text-sm text-white/40 uppercase tracking-wider mt-1">
             Preview based on {participantCount} participants in your repo network
@@ -276,10 +276,10 @@ export const NavigateTeaser: React.FC<NavigateTeaserProps> = ({ onBack, network 
 
               <div className="relative z-10">
                 <div className="w-12 h-12 mx-auto bg-white rounded-xl flex items-center justify-center mb-4 shadow-lg">
-                  <Image src="/flow.svg" alt="Flowryd" width={32} height={32} className="w-8 h-8" />
+                  <Image src="/flow.svg" alt="Flowryd OS" width={32} height={32} className="w-8 h-8" />
                 </div>
 
-                <h2 className="text-xl font-bold mb-4">This is Flowryd Navigate</h2>
+                <h2 className="text-xl font-bold mb-4">This is Flowryd OS Intelligence</h2>
 
                 <p className="text-sm text-white/70 mb-4">
                   Full platform launches <b>Q1 2026</b> with:
@@ -309,7 +309,7 @@ export const NavigateTeaser: React.FC<NavigateTeaserProps> = ({ onBack, network 
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 w-full py-3 bg-white/5 hover:bg-white/10 text-white font-bold rounded-lg transition-all border border-white/20"
                   >
-                    [Join Waitlist - Stay Updated]
+                    [Book a Demo]
                     <ArrowRight className="w-4 h-4" />
                   </a>
                 </div>

@@ -109,14 +109,14 @@ function LandingView({ onStart }: { onStart: () => void }) {
           </div>
 
           <span className="inline-block px-4 py-1.5 mb-6 rounded-full bg-white/10 border border-white/20 text-sm font-mono text-blue-300 tracking-wider backdrop-blur-sm">
-            THE MISSING LINK NO-ONE IS TALKING ABOUT
+            Accelerator for AllFi
           </span>
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4 leading-tight">
             <span className="block text-white">
-              The Orchestration Layer
+              Take the friction out of
             </span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-              for Canton Network
+              onchain transaction flows.
             </span>
           </h1>
         </motion.div>
@@ -127,8 +127,8 @@ function LandingView({ onStart }: { onStart: () => void }) {
           transition={{ delay: 0.4 }}
           className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto leading-relaxed"
         >
-          Stop coordinating complex transactions through email.<br/>
-          <span className="text-white font-semibold">Start building on-chain activity with Flowryd.</span>
+          Flowryd OS is your playbook. Open a deal, see exactly how it flows — the functions, the steps, the parties.<br/>
+          <span className="text-white font-semibold">Work it with everyone in your own Deal Room.</span>
         </motion.p>
         
         <motion.div
@@ -137,11 +137,15 @@ function LandingView({ onStart }: { onStart: () => void }) {
            transition={{ delay: 0.45 }}
            className="flex justify-center gap-8 py-4 text-sm font-mono text-white/50"
         >
-          <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-blue-500"></span>DISCOVER</span>
+          <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-blue-500"></span>Draft</span>
           <span className="flex items-center gap-2">→</span>
-          <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-white/20"></span>NAVIGATE</span>
+          <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-white/20"></span>Open</span>
           <span className="flex items-center gap-2">→</span>
-          <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-white/20"></span>ACTIVATE</span>
+          <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-white/20"></span>Negotiate</span>
+          <span className="flex items-center gap-2">→</span>
+          <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-white/20"></span>Locked</span>
+          <span className="flex items-center gap-2">→</span>
+          <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-white/20"></span>Committed</span>
         </motion.div>
 
         <motion.div
@@ -151,8 +155,8 @@ function LandingView({ onStart }: { onStart: () => void }) {
            className="w-full max-w-4xl mx-auto py-12"
         >
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold mb-2 text-white">How Flowryd Works</h2>
-            <p className="text-white/60">From discovery to activation in three simple steps</p>
+            <h2 className="text-2xl font-bold mb-2 text-white">How Flowryd OS Works</h2>
+            <p className="text-white/60">From draft to committed — your Deal Room in action</p>
           </div>
           
           <div className="rounded-2xl border border-white/10 overflow-hidden bg-black shadow-2xl shadow-blue-900/20">
@@ -172,35 +176,36 @@ function LandingView({ onStart }: { onStart: () => void }) {
             <div className="relative z-10 flex flex-col h-full">
               <div className="flex justify-between items-start mb-4">
                 <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center shadow-lg shadow-blue-900/50">
-                   <Image src="/flow.svg" alt="Flowryd" width={24} height={24} className="w-6 h-6 text-white" />
+                   <Image src="/flow.svg" alt="Flowryd OS" width={24} height={24} className="w-6 h-6 text-white" />
                 </div>
                 <div className="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs font-bold rounded-full border border-blue-500/20">
                   AVAILABLE NOW
                 </div>
               </div>
 
-              <h2 className="text-2xl font-bold mb-1">DISCOVER</h2>
-              <div className="text-3xl font-bold text-white mb-4">$100<span className="text-lg text-white/50 font-normal">/month</span></div>
+              <h2 className="text-2xl font-bold mb-1">Deal Room</h2>
+              <div className="text-3xl font-bold text-white mb-4">$2,000<span className="text-lg text-white/50 font-normal">/month per org</span></div>
 
               <p className="text-white/70 mb-6 text-sm leading-relaxed">
-                Visualize connection opportunities, calculate collateral efficiency, and simulate network effects.
+                Your room. All parties. Draft → Open → Negotiate → Locked → Committed. When it commits, it executes on Canton.
               </p>
 
               <ul className="text-sm text-white/80 space-y-3 mb-8">
-                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-blue-400 rounded-full"/> Network grid builder</li>
-                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-blue-400 rounded-full"/> VP badges (C7 Identity)</li>
-                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-blue-400 rounded-full"/> Connection intelligence</li>
+                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-blue-400 rounded-full"/> Deal Room Standard: $2,000/mo</li>
+                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-blue-400 rounded-full"/> Deal Room Pro: $4,000/mo</li>
+                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-blue-400 rounded-full"/> 0.15% success fee at Committed ($500–$50K cap)</li>
+                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-blue-400 rounded-full"/> Behind the Headline intelligence included</li>
               </ul>
 
               <div className="mt-auto">
-                <button 
-                  onClick={() => window.open('https://flowryd.typeform.com/to/gESTfumm', '_blank')}
+                <button
+                  onClick={() => window.open('https://flowryd.typeform.com/to/z4N2MGrQ', '_blank')}
                   className="w-full py-4 bg-white text-black rounded-xl font-bold text-lg hover:bg-blue-50 transition-all flex items-center justify-center gap-2 group-hover:scale-[1.02]"
                 >
-                  Join as Provider <ArrowRight className="w-5 h-5" />
+                  Let&apos;s Flow 🚀 <ArrowRight className="w-5 h-5" />
                 </button>
                 <div className="text-center mt-3 text-xs text-white/40">
-                  Public Launch Pricing until April 30, 2026
+                  You pay on outcomes, not activity. Canton Network fees passed through at cost.
                 </div>
               </div>
             </div>
@@ -212,23 +217,32 @@ function LandingView({ onStart }: { onStart: () => void }) {
             </div>
 
             <div className="relative z-10">
-              <h3 className="text-xl font-bold text-white/50 mb-6">Coming Soon</h3>
-              
+              <h3 className="text-xl font-bold text-white/50 mb-6">More from Flowryd OS</h3>
+
               <div className="space-y-6">
                 <div>
                   <div className="flex items-center gap-2 text-white/80 font-bold mb-1">
-                    NAVIGATE <span className="text-[10px] px-2 py-0.5 bg-white/10 rounded">WAITLIST</span>
+                    Intelligence <span className="text-[10px] px-2 py-0.5 bg-white/10 rounded">ADD-ON</span>
                   </div>
-                  <p className="text-sm text-white/50">Choose your path: Join existing flows, build from templates, or create custom workflows.</p>
+                  <p className="text-sm text-white/50">Canton market context filtered to what&apos;s relevant to your deal. Ryd AI at every step. Intelligence Pro: $750/month add-on.</p>
                 </div>
-                
+
                 <div className="w-full h-px bg-white/10" />
 
                 <div>
                   <div className="flex items-center gap-2 text-white/80 font-bold mb-1">
-                    ACTIVATE <span className="text-[10px] px-2 py-0.5 bg-white/10 rounded">Q2 2026</span>
+                    Marketplace <span className="text-[10px] px-2 py-0.5 bg-white/10 rounded">COMING SOON</span>
                   </div>
-                  <p className="text-sm text-white/50">Deploy smart contracts, execute coordinated transactions, and earn FA markers.</p>
+                  <p className="text-sm text-white/50">Inflight deals to join, App Stacks, and Canton tools. 2% per execution.</p>
+                </div>
+
+                <div className="w-full h-px bg-white/10" />
+
+                <div>
+                  <div className="flex items-center gap-2 text-white/80 font-bold mb-1">
+                    Retainer <span className="text-[10px] px-2 py-0.5 bg-white/10 rounded">ENTERPRISE</span>
+                  </div>
+                  <p className="text-sm text-white/50">$15,000/month (6-month) or $20,000/month-to-month. Includes Deal Room Pro + all add-ons.</p>
                 </div>
               </div>
 
@@ -239,7 +253,7 @@ function LandingView({ onStart }: { onStart: () => void }) {
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 w-full py-3 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-xl transition-all border border-white/10"
                   >
-                    Join Waitlist
+                    Book a Demo
                     <ArrowRight className="w-4 h-4" />
                   </a>
               </div>
@@ -249,10 +263,10 @@ function LandingView({ onStart }: { onStart: () => void }) {
 
         <div className="text-center pt-12 pb-4 space-y-2 opacity-60 hover:opacity-100 transition-opacity">
           <div className="text-sm font-semibold text-white tracking-wide">
-            Canton Network - Let's Flow 🌊
+            Flowryd OS — Accelerator for AllFi. Let&apos;s Flow. 🚀
           </div>
           <div className="text-[10px] text-zinc-500">
-            © 2026 Flowryd Limited. All Rights Reserved.
+            © 2026 Towler Enterprises Limited trading as Flowryd OS. All Rights Reserved.
           </div>
         </div>
       </div>
@@ -459,7 +473,7 @@ function AppView() {
           className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[11px] text-white/70 hover:bg-white/10 hover:text-white transition-colors"
         >
           <ArrowLeft className="w-3 h-3" />
-          <span>Back to Flowryd</span>
+          <span>Back to Flowryd OS</span>
         </Link>
           </div>
 
@@ -721,7 +735,7 @@ function AppView() {
                 disabled={readinessScore < 40}
                 className="flex items-center gap-2 px-4 py-2 bg-white text-black hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed rounded-lg font-bold text-xs transition-colors"
               >
-                Deploy Flow <ArrowRight className="w-3 h-3" />
+                Open Deal Room <ArrowRight className="w-3 h-3" />
               </button>
            </div>
           )}

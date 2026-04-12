@@ -93,7 +93,7 @@ export default function FlowRydHeroAnimation() {
           </defs>
           <text className="text-[12px] font-bold tracking-[0.4em] uppercase fill-emerald-400/80">
             <textPath href="#textCircle" startOffset="0%">
-              Advantage &nbsp; • &nbsp; Network &nbsp; • &nbsp; Code &nbsp; • &nbsp; Your &nbsp; • &nbsp;
+              AllFi &nbsp; • &nbsp; Deal Room &nbsp; • &nbsp; Flowryd OS &nbsp; • &nbsp; Let&apos;s Flow &nbsp; • &nbsp;
             </textPath>
           </text>
         </svg>
